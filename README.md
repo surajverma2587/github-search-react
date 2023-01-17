@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# GitHub Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Story
 
-## Available Scripts
+As a user I should be able to search for information using the GitHub API.
 
-In the project directory, you can run:
+## Acceptance Criteria
 
-### `npm start`
+- User should be able to search for repositories for a valid organisation `https://api.github.com/orgs/{organisationName}/repos`
+- User should be able to search for repositories for a valid GitHub username `https://api.github.com/users/{username}/repos`
+- User is able to select either search by organisation name OR search by username. Use a radio button for this.
+- If user selects search by organisation name then the label should read "Organisation" and placeholder should read "Please enter valid organisation"
+- If user selects search by username name then the label should read "Username" and placeholder should read "Please enter valid username"
+- Form should have validation where organisation name or github username is required
+- Repositories should be presented as many cards keeping in mind responsive layouts
+- Each repository must be presented as a card with the following information:
+  - Repo name
+  - Repo url
+  - Description
+  - User avatar
+- If the number of repositories returned from the API is 0 then the user should be presented with an alert `"No repositories found."`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Criteria
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Use function based components
+- Use the react hook `useState` and `useEffect`
+- Use `axios`
+- Ensure that the code follows semantic HTML structure
+- Ensure that the code is well structured in to re-useable components
+- Ensure the codebase follows the React files and folder structure
+- Deploy the react application using [GitHub pages](https://github.com/gitname/react-gh-pages)
 
-### `npm test`
+## Additional Resources
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- You can use [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) as your CSS framework
+- You can choose a colour palette from [coolors](https://coolors.co/)
+- You can import [font-awesome icons](https://fontawesome.com/icons) using the [CDN](https://cdnjs.com/libraries/font-awesome)
+- Axios library [axios](https://www.npmjs.com/package/axios)
 
-### `npm run build`
+## Wireframe Guide
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please use this high level wireframe as a guide for your portfolio and you are free to choose your own colours and/or layout if needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+TODO
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Example Application
 
-### `npm run eject`
+### Initial Load
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![initial load](./initial-load.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Valid Search
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![valid search](./valid-search.png)
