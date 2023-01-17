@@ -1,5 +1,5 @@
 :root {
-  --charcoal: #282c34;
+  --charcoal: #0e1117;
   --ocean-blue: #61dafb;
   --white: #ffffff;
 }
@@ -34,4 +34,28 @@ body {
   font-size: 24px;
   font-weight: 200;
   letter-spacing: 0.01em;
+}
+
+.search-form {
+  background-color: #eaeaea;
+  padding: 20px;
+}
+
+.repo-card {
+  width: 18rem;
+  margin: 10px;
+}
+
+.repos-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 768px) {
+  .repos-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
